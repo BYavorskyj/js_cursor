@@ -53,3 +53,14 @@ return uan;
     }
     printStairs(3)
 
+/* 7. A function which transforms first and last letter to uppercase (use built in string’s method). */
+    function firstAndLastToUpper(str) {
+        let first;
+        let last;
+        first=str[0].toUpperCase();
+        last=str[(str.length)-1].toUpperCase();
+        return first+str.slice(1,(str.length-1))+last;
+    }
+
+
+    firstAndLastToUpper('abc') // 'AbC'
