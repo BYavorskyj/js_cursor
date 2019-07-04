@@ -64,3 +64,11 @@ return uan;
 
 
     firstAndLastToUpper('abc') // 'AbC'
+
+// 8. A function which returns true if string contains ironman or cursor or ostap otherwise returns false. The function must be case-insensitive.
+    function cursorCheck(str) {
+    return str.toLowerCase().includes('ironman') || str.toLowerCase().includes('cursor') || str.toLowerCase().includes('ostap');
+    }
+    console.log(cursorCheck('IroNman'));
+    console.log(cursorCheck('Hello I am OstaP')); // true
+    console.log(cursorCheck('Superman is here')); // false
