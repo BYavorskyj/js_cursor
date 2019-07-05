@@ -72,3 +72,33 @@ return uan;
     console.log(cursorCheck('IroNman'));
     console.log(cursorCheck('Hello I am OstaP')); // true
     console.log(cursorCheck('Superman is here')); // false
+
+// 9. A function which returns a string with all letters in uppercase (without built in string’s method). The function supports only english alphabet.
+    function toUppercase(str) {
+        let upper = str.toUpperCase();
+    return upper;
+    }
+toUppercase('abc') // 'ABC'
+
+// 10.A function which removes duplication of letters in string. The function must be case-insensitive. //
+    function removeDuplicationLetters(str) {
+        
+    }
+
+    removeDuplicationLetters('Hello I am Iron Man') // 'Helo I am rn '
+
+ // 11. A function that when given a number n returns the n-th number in the Fibonacci Sequence. The sequence starts from 1 and looks like this: 1, 1, 2, 3, 5, 8, 13, 21…
+    function fibonacci(n) {
+        let a = 1
+        let b = 1;
+    for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+
+    fibonacci(3) // 2
+    fibonacci(5) // 5
+    fibonacci(7) // 13
