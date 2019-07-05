@@ -49,9 +49,18 @@ return uan;
 
 /* 6. A function which prints the pyramid picture of size n */
     function printPyramid(n) {
-        
+        for (var i = 0; i < n; i++) {
+            var str = '';
+            for (var j = 1; j < n-i; j++) {
+              str = str + ' ';
+            }
+            for (var k = 1; k <= (2*i+1); k++) {
+              str = str + '*';
+            }
+            console.log(str);
+          }
     }
-    printStairs(3)
+    printPyramid(3)
 
 /* 7. A function which transforms first and last letter to uppercase (use built in string’s method). */
     function firstAndLastToUpper(str) {
@@ -82,7 +91,12 @@ toUppercase('abc') // 'ABC'
 
 // 10.A function which removes duplication of letters in string. The function must be case-insensitive. //
     function removeDuplicationLetters(str) {
-        
+        return str
+        .split('')
+        .filter(function(item, pos, self) {
+        return self.indexOf(item) == pos;
+        })
+        .join('');
     }
 
     removeDuplicationLetters('Hello I am Iron Man') // 'Helo I am rn '
